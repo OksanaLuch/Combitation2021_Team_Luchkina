@@ -18,7 +18,7 @@ std::string getStringCombo(const T& c, int combo)
 }
 
 template<typename T>
-std::set<std::string> combo(const T& c, int k)
+std::set<std::string> binaryMethod(const T& c, int k)
 {
     std::set<std::string> result;
     int n = c.size();
