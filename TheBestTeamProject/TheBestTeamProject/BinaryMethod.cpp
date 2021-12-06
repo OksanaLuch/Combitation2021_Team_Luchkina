@@ -1,31 +1,28 @@
 #include <vector>
 #include <Bits.h>
-#include <iostream>
-#include <set>
 #include <string>
 
-template<typename T>
-std::string getStringCombo(const T& c, int combo)
+std::vector<int> getVectorCombo(const std::vector<int>& c, int combo)
 {
-    std::string result = "";
+    std::vector<int> result;
     int n = c.size();
     for (int i = 0; i < n; ++i) {
-        if ((combo >> i) & 1)
-            result += c[i];
+        if ((combo >> i) & 1) {
+            result.insert(result.end(), c[i]);
+        }
     }
-
     return result;
 }
 
-template<typename T>
-std::set<std::string> binaryMethod(const T& c, int k)
+std::vector<std::vector<int>> combo(const std::vector<int>& c, int k)
 {
-    std::set<std::string> result;
+    std::vector<std::vector<int>> result;
     int n = c.size();
     int combo = (1 << k) - 1;       // k bit sets
+    int i = 0;
     while (combo < 1 << n) {
 
-        result.insert(getStringCombo(c, combo));
+        result.insert(result.end(), getVectorCombo(c, combo));
 
         int x = combo & -combo;
         int y = combo + x;
