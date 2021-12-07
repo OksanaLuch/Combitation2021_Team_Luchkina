@@ -1,9 +1,5 @@
-int C(int n, int k)
-{
-    if (k == 0 || k == n)
-        return 1;
-    return C(n - 1, k - 1) * n / k;
-}
+#include "TheBestTeamProject.h"
+
 
 void Increase(int& j, int& k, vector<int>& bufArray);
 

@@ -1,8 +1,6 @@
-#include <vector>
-#include <Bits.h>
-#include <string>
+#include "TheBestTeamProject.h"
 
-std::vector<int> getVectorCombo(const std::vector<int>& c, int combo)
+std::vector<int> getVectorCombo(std::vector<int> c, int combo)
 {
     std::vector<int> result;
     int n = c.size();
@@ -14,7 +12,7 @@ std::vector<int> getVectorCombo(const std::vector<int>& c, int combo)
     return result;
 }
 
-std::vector<std::vector<int>> combo(const std::vector<int>& c, int k)
+std::vector<std::vector<int>> combo(int k, std::vector<int> c)
 {
     std::vector<std::vector<int>> result;
     int n = c.size();

@@ -1,23 +1,7 @@
-﻿
+﻿#include "TheBestTeamProject.h"
 
-int C(int n, int k)
-{
-    if (k == 0 || k == n)
-        return 1;
-    return C(n - 1, k - 1) * n / k;
-}
 
-void OutputCombinaitions(vector<vector<int>> combinations)
-{
-    for (int i = 0; i < combinations.size(); ++i)
-    {
-        for (int j = 0; j < combinations[i].size(); ++j)
-        {
-            cout << combinations[i][j] << " ";
-        }
-        cout << endl;
-    }
-}
+
 vector<vector<int>> LexicographicOrder(int k, vector<int> plenty)
 {
     int c = C(plenty.size(), k);
